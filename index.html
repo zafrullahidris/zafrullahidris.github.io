@@ -93,7 +93,7 @@
                         </p>
                         <p>
                         </p>
-                        <a href="#">Download CV</a>
+                        <a href="#" id="downloadButton">Download CV</a>
                     </div>
                 </div>
 
@@ -109,25 +109,33 @@
                             </div>
                             
                             <div class="skill-name">
-                                <p>ASP.NET Frameworks</p><p>90%</p>
+                                <p>.NET Frameworks</p><p>90%</p>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <div class="skill-name">
+                                <p>.NET Maui Framework</p><p>60%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             
                             <div class="skill-name">
-                                <p>Entity Framework</p><p>90%</p>
+                                <p>ORMs(Entity Framework, Dapper)</p><p>90%</p>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <div class="skill-name">
-                                <p>Database Management System (DBMS)</p><p>90%</p>
                             </div>
 
+                            <div class="skill-name">
+                                <p>Database Management System (MSSQL, MySql, PostgreSQL)</p><p>90%</p>
+                            </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
+
                             <div class="skill-name">
                                 <p>Unit Testing</p><p>70%</p>
                             </div>
@@ -136,7 +144,7 @@
                             </div>
 
                             <div class="skill-name">
-                                <p>Microservices Architecture</p><p>70%</p>
+                                <p>Microservices Architecture</p><p>50%</p>
                             </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -154,20 +162,6 @@
                             </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <div class="skill-name">
-                                <p>Java</p><p>50%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-
-                            <div class="skill-name">
-                                <p>Python</p><p>50%</p>
-                            </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                         </div>
                     </div>
@@ -187,6 +181,13 @@
                             </div>
                             <div class="progress">
                                 <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+
+                            <div class="skill-name">
+                                <p>Xamarin</p><p>50%</p>
+                            </div>
+                            <div class="progress">
+                                <div class="progress-bar" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
                             </div>
                             
                             <div class="skill-name">
@@ -548,6 +549,36 @@
                 </div>
             </div>
         </div>
+        <script>
+            // Function to handle file download
+            function downloadFile() {
+              // Specify the file path relative to the project
+              const filePath = './MyCv.pdf'; // Update with your actual file path
+        
+              // Create a link element
+              const link = document.createElement('a');
+        
+              // Set the href attribute to the file path
+              link.href = filePath;
+        
+              // Specify the download attribute with the desired file name
+              link.download = 'ZAFRULLAHIDRIS_CV'; // Update with your desired file name
+        
+              // Append the link to the document
+              document.body.appendChild(link);
+        
+              // Trigger a click event on the link to initiate the download
+              link.click();
+        
+              // Remove the link from the document
+              document.body.removeChild(link);
+            }
+        
+            // Attach the downloadFile function to the button click event
+            document.getElementById('downloadButton').addEventListener('click', downloadFile);
+          </script>
+        
+        </body>
         <!-- Contact End -->
 
         <!-- Footer Start -->
