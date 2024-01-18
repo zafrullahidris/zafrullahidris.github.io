@@ -78,11 +78,11 @@ h6 {
 .top-header:after {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 50%; 
     height: 100%;
     left: 0;
     top: 0;
-    background: url(../img/top-header.jpg) left top repeat;
+    background: url(../img/myprofile2.jpg) left top repeat;
     background-size: cover;
     filter: blur(8px);
     -webkit-filter: blur(8px);
